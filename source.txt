@@ -1,0 +1,61 @@
+ลุงสอนเขียนเว็บไซต์ ระบบจัดการข้อมูลในโรงเรียน ด้วย Python Django EP.1
+https://www.youtube.com/watch?v=fmulCaqpp9I&t=35401s
+
+STEP
+
+1.Install python ( manual install )
+2.Install code editor ( program for coding )
+3.Fixing Environment variables
+4.Install Virtual Environment ( virtualenv ) khue program t h pen virtual br hai ka thop kup python luk khrng hao thouk thuea t mee project tarng kun yar luem activate krn  
+  
+5. update pip
+   create venv ( virtualenv venv ) 
+   activate ( .\venv\scripts\activate ) windows |||| activate ( source ./venv/scripts/activate ) MacOS 
+
+6.install django
+
+7.create project ( django-admin startproject [project's name] ) #sarng project (web)
+8.run server (python manage.py runserver)
+
+
+9. create user or addmin (python manage.py migrate) 	#ເຮັດໃຫ້ລະບົບສ້າງຖານຂໍ້ມູນ(ADMIN PAGE AND OTHERS)ອັດຕະໂນມັດ
+
+10. create supper user for login admid/ page ( python manage.py createsuperuser )
+
+11. create app of Django ( python manage.py startapp [name of app])
+
+12. open project folder > urls.py 
+	- add module include (from django.urls import path, include) #ເພື່ອໃຊ້ດຶງຂໍ້ມູນຈາກ app 
+	- add 
+	   --> path('', include('[your app].urls'))   #ດືງຂໍ້ມູນ url ຈາກ [your app].urls
+							[your app]/urls ເປັນບ່ອນເກັບ url ຫຼັກ
+
+13. create new urls.py to [your app] folder
+	-then coppy since 2 line to end of codes [your project]/urls.py --> paste to [your app]/urls.py   
+	-remove line --> path('admin/', admin.site.urls)
+	-remove --> ,include
+	-remove --> include('[your app].urls')
+
+14. open views.py 			         
+	-add to 2 line
+	   --> from django.http import HttpResponse
+	
+	create type :
+
+	def HomePage(request): #ດຶງ file HTML ເປັນຫນ້າ homepage
+   	    return HttpResponse('<h1>Hello inter</h1>')      <<-------------------- 
+										  |
+15. open [your app]/urls.py							  |
+	-add									  |
+	   from .views import *  #views.py ເປັນບ່ອນເກັບຫນ້າ page ຕ່າງໆໂດຍໃຊ້ function ເປັນຕົວຕໍ່-|  
+				 # (.) ທາງຫນ້າ views ເພື່ອໃຊ້ສຳລັບບອກວ່າເຮົາຈະ import ໃນ director ດຽວກັນກັບ urls.py [your app] folder
+				 # * ເອົາທຸກ function (page) ໃນ views ເພື່ອການສະດວກໃນການ import ຕອນສ້າງຫນ້າໃຫມ່
+
+#school --> project
+    - urls.py #
+
+
+
+
+
+
