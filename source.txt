@@ -57,7 +57,13 @@ STEP
 	- urls.py #ເປັນຫນ້າ page ( ທີ່ດຶງດ້ວຍ Function (ex. HomePage) ) ເສີມທີ່ເຮົາສ້າງຂຶ້ນມາເອງ ແລ້ວໄປລິ້ງກັບ function (webpage.html) ໃນຟາຍ views.py
 	- views.py #ເປັນບ່ອນເກັບຫນ້າ function(page) link ຟາຍ html ເພື່ອເອົາໄປ link ໃຫ້ urls.py
  
+16 . create /template to [your app] folder 
+	-create /[your app] folder inside /template folder
 
+17. go to setting.py in [project folder]
+    -go to INSTALLED APP then add --> '[your app]',
+	-go to DATABASES  then coppy --> os.path.join(BASE_DIR, 'db.sqlite3') ---> Then paste to ---> TEMPLATES --> 'DIRS': os.path.join(BASE_DIR, '[your app]/template') ---> then fix more directory
 
-
+18. link html page 
+	- function in views is a page to connect html --> return render(request, '[your app in template]/[file name].html') 
 
