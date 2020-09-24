@@ -1,5 +1,5 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render  #ດືງຈາກ template
+from django.http import HttpResponse #ຂຽນເທຶງກະດານເອງ
 
 def HomePage(request):
-    return HttpResponse()
+    return 
