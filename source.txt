@@ -9,7 +9,7 @@ STEP
 4.Install Virtual Environment ( virtualenv ) khue program t h pen virtual br hai ka thop kup python luk khrng hao thouk thuea t mee project tarng kun yar luem activate krn  
   
 5. update pip
-   create venv ( virtualenv venv ) 
+   create venv ( virtualenv venv ) (virtualenv --python=/usr/bin/python2.6 <path/to/new/virtualenv/>) 
    activate ( .\venv\scripts\activate ) windows |||| activate ( source ./venv/scripts/activate ) MacOS 
 
 6.install django
@@ -51,10 +51,12 @@ STEP
 				 # (.) ທາງຫນ້າ views ເພື່ອໃຊ້ສຳລັບບອກວ່າເຮົາຈະ import ໃນ director ດຽວກັນກັບ urls.py [your app] folder
 				 # * ເອົາທຸກ function (page) ໃນ views ເພື່ອການສະດວກໃນການ import ຕອນສ້າງຫນ້າໃຫມ່
 
-#school --> project
-    - urls.py #
-
-
+#django --> project
+    - urls.py #ເປັນບ່ອນເກັບ urls admin + link ເສີມໃນ [your project]/urls.pysss
+#school --> App
+	- urls.py #ເປັນຫນ້າ page ( ທີ່ດຶງດ້ວຍ Function (ex. HomePage) ) ເສີມທີ່ເຮົາສ້າງຂຶ້ນມາເອງ ແລ້ວໄປລິ້ງກັບ function (webpage.html) ໃນຟາຍ views.py
+	- views.py #ເປັນບ່ອນເກັບຫນ້າ function(page) link ຟາຍ html ເພື່ອເອົາໄປ link ໃຫ້ urls.py
+ 
 
 
 
